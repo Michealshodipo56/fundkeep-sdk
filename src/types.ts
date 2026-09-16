@@ -49,5 +49,6 @@ export interface FundKeepClientOptions {
 /** Result of a successfully confirmed write transaction. */
 export interface SentTransactionResult<T> {
   hash: string;
+  ledger?: number;
   value: T;
 }

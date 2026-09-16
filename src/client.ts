@@ -168,7 +168,11 @@ export class FundKeepClient {
       ? (scValToNative(result.returnValue) as T)
       : (undefined as T);
 
-    return { hash: sendResult.hash, value };
+    return {
+      hash: sendResult.hash,
+      ledger: "ledger" in result ? (result.ledger as number) : undefined,
+      value,
+    };
   }
 
   private async buildTx(
