@@ -8,11 +8,16 @@ Not published to npm — install directly from GitHub:
 npm install github:Michealshodipo56/fundkeep-sdk
 ```
 
+## Requirements
+
+- Node.js v22.12+
+
 ## Usage
 
 ```ts
 import { FundKeepClient, toStroops, fromStroops } from "@fundkeep/sdk";
 import { signTransaction } from "@stellar/freighter-api";
+import { Networks } from "@stellar/stellar-sdk";
 
 const client = new FundKeepClient({
   contractId: process.env.NEXT_PUBLIC_CONTRACT_ID!,
